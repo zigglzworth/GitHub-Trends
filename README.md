@@ -18,7 +18,9 @@ The app is designed with simplicity, speed, and smoothness in mind. Technical ch
 by being lightweight and intuitive
 
 The following pods were used:
-     SDWebImage - For loading and cahcing avatar images 
+
+     SDWebImage - For loading and cahcing avatar images
+     
      ReachabilitySwift - For detecting internet connectivity and displaying disconnection icon in the event of net loss
 
 # Trade-offs
