@@ -145,6 +145,8 @@ class DetailViewController: UIViewController {
             alertView.addAction(UIAlertAction(title: "Share", style: .default, handler: { (action) in
                 
                 let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+                activity.popoverPresentationController?.sourceRect = btn.frame
+                activity.popoverPresentationController?.sourceView = self.view
                 self.present(activity, animated: true, completion: nil)
                 
             }))
