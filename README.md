@@ -1,5 +1,7 @@
 # GitHub-Trends
-An iOS App that shows trending GitHub repos and allows marking favourites and sharing repo links
+
+An iOS App that shows trending GitHub repos and allows marking favourites and sharing repo links.
+Designed for both iPad and iPhone
 
 
 
