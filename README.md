@@ -17,6 +17,10 @@ On the UI side there are two main screens. A screen showing a searchable collect
 The app is designed with simplicity, speed, and smoothness in mind. Technical choices in the app adhere to this guideline
 by being lightweight and intuitive
 
+The following pods were used:
+     SDWebImage - For loading and cahcing avatar images 
+     ReachabilitySwift - For detecting internet connectivity and displaying disconnection icon in the event of net loss
+
 # Trade-offs
 
 In storing favourites NSKeyedArchiver was used as it is simple and fast to implement, however with more time for development
