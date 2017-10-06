@@ -2,11 +2,21 @@
 An iOS App that shows trending GitHub repos and allows marking favourites and sharing repo links
 
 
+
 # General architecture of the application.
+
+The is written in Swift 3.0 and follows an archeticture that revolves around User interface controllers, API connection managers, API request helper objects, Local storage manager, and native objects representing request results
+
+On the UI side there are two main screens. A screen showing a searchable collection of repos as chosen by the user (trending last month, last week, today, and favourites), and another screen showing more details about a repo and allowing for actions such as saving to favourites, sharing, and opening in GitHub (safari).
 
 
 # Reasoning behind main technical choices.
 
+The app is designed with simplicity, speed, and smoothness in mind. Technical choices in the app adhere to this guideline
+by being lightweight and intuitive
 
 # Trade-offs
+
+In storing favourites NSKeyedArchiver was used as it is simple and fast to implement, however with more time for development
+a more versatile and remotely-sycable solution may be used (AWS Cognito, Firebase, etc)
 
