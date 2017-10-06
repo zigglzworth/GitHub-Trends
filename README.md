@@ -22,3 +22,7 @@ by being lightweight and intuitive
 In storing favourites NSKeyedArchiver was used as it is simple and fast to implement, however with more time for development
 a more versatile and remotely-sycable solution may be used (AWS Cognito, Firebase, etc)
 
+
+# Installation
+
+Make sure to have cocoapods installed and perform pod install before building
