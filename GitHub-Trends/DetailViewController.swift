@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var forksLbl:UILabel?
     @IBOutlet weak var createdAtLbl:UILabel?
     @IBOutlet weak var languageLbl:UILabel?
+    @IBOutlet weak var isFavouriteLbl:UILabel?
     
     @IBOutlet weak var avatarImageView:UIImageView?
     let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
@@ -82,7 +83,12 @@ class DetailViewController: UIViewController {
             formatter.dateFormat = "dd MMM yyyy"
             self.createdAtLbl?.text = "Created at " + formatter.string(from: (self.repoInfo?.created_at)!)
             
-            
+            if self.repoInfo?.isFavourite == true {
+                self.isFavouriteLbl?.isHidden = false
+            }
+            else {
+                self.isFavouriteLbl?.isHidden = true
+            }
             
             let placeholderImage = UIImage(named: "github_avatar")
             if let imagePath = self.repoInfo?.owner?.avatar_url {
@@ -116,6 +122,7 @@ class DetailViewController: UIViewController {
             alertView.addAction(UIAlertAction(title: "Save to favourites", style: .default, handler: { (action) in
                 
                 self.repoInfo?.saveToFavourites()
+                self.loadRepo()
                 
             }))
             
@@ -125,6 +132,7 @@ class DetailViewController: UIViewController {
             alertView.addAction(UIAlertAction(title: "Remove from favourites", style: .default, handler: { (action) in
                 
                 self.repoInfo?.removeFromFavourites()
+                self.loadRepo()
                 
             }))
             
