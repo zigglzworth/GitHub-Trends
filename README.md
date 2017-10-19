@@ -26,7 +26,7 @@ The following pods were used:
 # Trade-offs
 
 In storing favourites NSKeyedArchiver was used as it is simple and fast to implement, however with more time for development
-a more versatile and remotely-sycable solution may be used (AWS Cognito, Firebase, etc)
+a more versatile and remotely-syncable solution may be used (AWS Cognito, Firebase, etc)
 
 Currently the search will search the currently displayed collection and then slowly reveal more repos that match
 the search for that colleciton request. However it should simply perform one GitHub API request that combines 
